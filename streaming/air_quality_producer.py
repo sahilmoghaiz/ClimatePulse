@@ -1,7 +1,8 @@
+import os
 import csv
 from kafka import KafkaProducer, JsonSerializer
 
-KAFKA_BROKER = "localhost:9092"
+KAFKA_BROKER = os.getenv("KAFKA_BROKER", "localhost:9092")
 TOPIC_NAME = "air_quality_data"
 CSV_FILE = "data/raw/air_quality_data.csv"
 

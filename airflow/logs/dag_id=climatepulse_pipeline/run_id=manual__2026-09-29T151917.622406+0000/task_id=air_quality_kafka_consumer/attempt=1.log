@@ -1,0 +1,203 @@
+{"timestamp":"2026-09-29T15:19:27.247404Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":2412}
+{"timestamp":"2026-09-29T15:19:27.277776Z","level":"info","event":"DAG bundles loaded: dags-folder","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":304}
+{"timestamp":"2026-09-29T15:19:27.279211Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/climatepulse_dag.py","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":460}
+{"timestamp":"2026-09-29T15:19:27.312463Z","level":"info","event":"Worker startup parse complete","bundle_name":"dags-folder","bundle_version":null,"dag_file":"climatepulse_dag.py","dag_id":"climatepulse_pipeline","bundle_prepare_ms":2,"dag_file_parse_ms":33,"try_number":1,"task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"task","filename":"task_runner.py","lineno":1073}
+{"timestamp":"2026-09-29T15:19:27.339386Z","level":"info","event":"::endgroup::","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"task","filename":"task_runner.py","lineno":2232}
+{"timestamp":"2026-09-29T15:19:27.531833Z","level":"info","event":"IO loop starting (client_id=kafka-python-3.0.11)","logger":"kafka.net.selector","filename":"selector.py","lineno":236}
+{"timestamp":"2026-09-29T15:19:27.532402Z","level":"info","event":"Attempting bootstrap to bootstrap-0 at climatepulse-kafka:29092 (rack None)","logger":"kafka.net.manager","filename":"manager.py","lineno":119}
+{"timestamp":"2026-09-29T15:19:27.532520Z","level":"info","event":"Initializing connection for node_id bootstrap-0 at climatepulse-kafka:29092 (rack=None)","logger":"kafka.net.manager","filename":"manager.py","lineno":282}
+{"timestamp":"2026-09-29T15:19:27.534093Z","level":"info","event":"<KafkaTCPTransport [172.19.0.4:29092<-58630]>: connected to <socket.socket fd=34, family=2, type=1, proto=6, laddr=('172.19.0.3', 58630), raddr=('172.19.0.4', 29092)>","logger":"kafka.net.transport","filename":"transport.py","lineno":354}
+{"timestamp":"2026-09-29T15:19:27.537879Z","level":"info","event":"<KafkaConnection node_id=bootstrap-0 host=[172.19.0.4:29092<-58630] broker_version=unknown (initializing)>: Broker version identified as 4.0","logger":"kafka.net.connection","filename":"connection.py","lineno":415}
+{"timestamp":"2026-09-29T15:19:27.538315Z","level":"info","event":"<KafkaConnection node_id=bootstrap-0 host=[172.19.0.4:29092<-58630] broker_version=(4, 0) (connected)>: Connected","logger":"kafka.net.connection","filename":"connection.py","lineno":375}
+{"timestamp":"2026-09-29T15:19:27.544260Z","level":"info","event":"Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)","logger":"kafka.cluster","filename":"cluster.py","lineno":638}
+{"timestamp":"2026-09-29T15:19:27.544578Z","level":"info","event":"Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)","logger":"kafka.net.manager","filename":"manager.py","lineno":162}
+{"timestamp":"2026-09-29T15:19:27.544691Z","level":"info","event":"Closing bootstrap connection bootstrap-0","logger":"kafka.net.manager","filename":"manager.py","lineno":165}
+{"timestamp":"2026-09-29T15:19:27.544949Z","level":"info","event":"<KafkaTCPTransport [172.19.0.4:29092<-58630]>: Closing transport","logger":"kafka.net.transport","filename":"transport.py","lineno":49}
+{"timestamp":"2026-09-29T15:19:27.545188Z","level":"info","event":"<KafkaConnection node_id=bootstrap-0 broker_version=(4, 0) (disconnected)>: Connection closed","logger":"kafka.net.connection","filename":"connection.py","lineno":242}
+{"timestamp":"2026-09-29T15:19:27.545356Z","level":"info","event":"Starting metadata refresh loop","logger":"kafka.cluster","filename":"cluster.py","lineno":120}
+{"timestamp":"2026-09-29T15:19:27.546205Z","level":"info","event":"Updating subscribed topics to: ('air_quality_data',)","logger":"kafka.consumer.subscription_state","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","filename":"subscription_state.py","lineno":178}
+{"timestamp":"2026-09-29T15:19:27.645445Z","level":"info","event":"Initializing connection for node_id 1 at climatepulse-kafka:29092 (rack=None)","logger":"kafka.net.manager","filename":"manager.py","lineno":282}
+{"timestamp":"2026-09-29T15:19:27.647211Z","level":"info","event":"<KafkaTCPTransport [172.19.0.4:29092<-58642]>: connected to <socket.socket fd=34, family=2, type=1, proto=6, laddr=('172.19.0.3', 58642), raddr=('172.19.0.4', 29092)>","logger":"kafka.net.transport","filename":"transport.py","lineno":354}
+{"timestamp":"2026-09-29T15:19:27.651259Z","level":"info","event":"<KafkaConnection node_id=1 host=[172.19.0.4:29092<-58642] broker_version=(4, 0) (connected)>: Connected","logger":"kafka.net.connection","filename":"connection.py","lineno":375}
+{"timestamp":"2026-09-29T15:19:27.654009Z","level":"info","event":"Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 0)","logger":"kafka.cluster","filename":"cluster.py","lineno":638}
+{"timestamp":"2026-09-29T15:19:27.654848Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='air_quality_data', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":270}
+{"timestamp":"2026-09-29T15:19:27.754014Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='air_quality_data', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":688}
+{"timestamp":"2026-09-29T15:19:27.782364Z","level":"info","event":"Received message 1/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.782943Z","level":"info","event":"Received message 2/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.783200Z","level":"info","event":"Received message 3/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.783460Z","level":"info","event":"Received message 4/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.783672Z","level":"info","event":"Received message 5/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.783859Z","level":"info","event":"Received message 6/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.784144Z","level":"info","event":"Received message 7/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.784426Z","level":"info","event":"Received message 8/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.784714Z","level":"info","event":"Received message 9/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.785008Z","level":"info","event":"Received message 10/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.785286Z","level":"info","event":"Received message 11/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.785714Z","level":"info","event":"Received message 12/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.785970Z","level":"info","event":"Received message 13/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.786268Z","level":"info","event":"Received message 14/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.786520Z","level":"info","event":"Received message 15/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.787349Z","level":"info","event":"Received message 16/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.787630Z","level":"info","event":"Received message 17/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.787974Z","level":"info","event":"Received message 18/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.788212Z","level":"info","event":"Received message 19/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.788445Z","level":"info","event":"Received message 20/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.788663Z","level":"info","event":"Received message 21/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.788861Z","level":"info","event":"Received message 22/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.789091Z","level":"info","event":"Received message 23/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.789306Z","level":"info","event":"Received message 24/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.789626Z","level":"info","event":"Received message 25/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.789868Z","level":"info","event":"Received message 26/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.790075Z","level":"info","event":"Received message 27/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.790312Z","level":"info","event":"Received message 28/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.790546Z","level":"info","event":"Received message 29/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.790779Z","level":"info","event":"Received message 30/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.790982Z","level":"info","event":"Received message 31/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.791178Z","level":"info","event":"Received message 32/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.791393Z","level":"info","event":"Received message 33/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.791632Z","level":"info","event":"Received message 34/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.791849Z","level":"info","event":"Received message 35/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.792057Z","level":"info","event":"Received message 36/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.792257Z","level":"info","event":"Received message 37/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.792462Z","level":"info","event":"Received message 38/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.792679Z","level":"info","event":"Received message 39/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.792872Z","level":"info","event":"Received message 40/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.793080Z","level":"info","event":"Received message 41/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.793528Z","level":"info","event":"Received message 42/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.793896Z","level":"info","event":"Received message 43/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.794232Z","level":"info","event":"Received message 44/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.794550Z","level":"info","event":"Received message 45/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.794876Z","level":"info","event":"Received message 46/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.795111Z","level":"info","event":"Received message 47/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.795384Z","level":"info","event":"Received message 48/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.795612Z","level":"info","event":"Received message 49/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.795797Z","level":"info","event":"Received message 50/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.796048Z","level":"info","event":"Received message 51/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.796273Z","level":"info","event":"Received message 52/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.796504Z","level":"info","event":"Received message 53/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.796705Z","level":"info","event":"Received message 54/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.796879Z","level":"info","event":"Received message 55/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797051Z","level":"info","event":"Received message 56/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797223Z","level":"info","event":"Received message 57/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797403Z","level":"info","event":"Received message 58/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797589Z","level":"info","event":"Received message 59/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797765Z","level":"info","event":"Received message 60/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.797948Z","level":"info","event":"Received message 61/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.798158Z","level":"info","event":"Received message 62/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.798374Z","level":"info","event":"Received message 63/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.798665Z","level":"info","event":"Received message 64/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.798933Z","level":"info","event":"Received message 65/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.799153Z","level":"info","event":"Received message 66/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.799362Z","level":"info","event":"Received message 67/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.799538Z","level":"info","event":"Received message 68/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.799752Z","level":"info","event":"Received message 69/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.799985Z","level":"info","event":"Received message 70/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.800257Z","level":"info","event":"Received message 71/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.800515Z","level":"info","event":"Received message 72/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.800758Z","level":"info","event":"Received message 73/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.801003Z","level":"info","event":"Received message 74/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.801209Z","level":"info","event":"Received message 75/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.801392Z","level":"info","event":"Received message 76/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.801605Z","level":"info","event":"Received message 77/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.801831Z","level":"info","event":"Received message 78/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802031Z","level":"info","event":"Received message 79/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802218Z","level":"info","event":"Received message 80/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802394Z","level":"info","event":"Received message 81/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802565Z","level":"info","event":"Received message 82/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802733Z","level":"info","event":"Received message 83/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.802900Z","level":"info","event":"Received message 84/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.803066Z","level":"info","event":"Received message 85/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.803246Z","level":"info","event":"Received message 86/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.803421Z","level":"info","event":"Received message 87/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.803639Z","level":"info","event":"Received message 88/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.803829Z","level":"info","event":"Received message 89/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.804002Z","level":"info","event":"Received message 90/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.804172Z","level":"info","event":"Received message 91/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.804471Z","level":"info","event":"Received message 92/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.804711Z","level":"info","event":"Received message 93/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.804910Z","level":"info","event":"Received message 94/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805091Z","level":"info","event":"Received message 95/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805269Z","level":"info","event":"Received message 96/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805447Z","level":"info","event":"Received message 97/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805625Z","level":"info","event":"Received message 98/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805806Z","level":"info","event":"Received message 99/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.805984Z","level":"info","event":"Received message 100/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.806165Z","level":"info","event":"Received message 101/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.806343Z","level":"info","event":"Received message 102/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.806520Z","level":"info","event":"Received message 103/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.806697Z","level":"info","event":"Received message 104/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.806874Z","level":"info","event":"Received message 105/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.807047Z","level":"info","event":"Received message 106/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.807264Z","level":"info","event":"Received message 107/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.807514Z","level":"info","event":"Received message 108/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.807729Z","level":"info","event":"Received message 109/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.807926Z","level":"info","event":"Received message 110/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.808161Z","level":"info","event":"Received message 111/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.808366Z","level":"info","event":"Received message 112/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.808587Z","level":"info","event":"Received message 113/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.808771Z","level":"info","event":"Received message 114/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.808956Z","level":"info","event":"Received message 115/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.809135Z","level":"info","event":"Received message 116/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.809312Z","level":"info","event":"Received message 117/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.809486Z","level":"info","event":"Received message 118/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.809662Z","level":"info","event":"Received message 119/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.809839Z","level":"info","event":"Received message 120/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810014Z","level":"info","event":"Received message 121/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810189Z","level":"info","event":"Received message 122/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810371Z","level":"info","event":"Received message 123/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810551Z","level":"info","event":"Received message 124/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810729Z","level":"info","event":"Received message 125/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.810904Z","level":"info","event":"Received message 126/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811078Z","level":"info","event":"Received message 127/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811252Z","level":"info","event":"Received message 128/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811426Z","level":"info","event":"Received message 129/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811600Z","level":"info","event":"Received message 130/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811778Z","level":"info","event":"Received message 131/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.811952Z","level":"info","event":"Received message 132/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.812128Z","level":"info","event":"Received message 133/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.812306Z","level":"info","event":"Received message 134/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.812510Z","level":"info","event":"Received message 135/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.812690Z","level":"info","event":"Received message 136/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.812872Z","level":"info","event":"Received message 137/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813053Z","level":"info","event":"Received message 138/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813231Z","level":"info","event":"Received message 139/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813410Z","level":"info","event":"Received message 140/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813584Z","level":"info","event":"Received message 141/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813761Z","level":"info","event":"Received message 142/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.813951Z","level":"info","event":"Received message 143/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.814160Z","level":"info","event":"Received message 144/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.814356Z","level":"info","event":"Received message 145/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.814598Z","level":"info","event":"Received message 146/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.814818Z","level":"info","event":"Received message 147/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815021Z","level":"info","event":"Received message 148/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815214Z","level":"info","event":"Received message 149/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815401Z","level":"info","event":"Received message 150/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815578Z","level":"info","event":"Received message 151/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815753Z","level":"info","event":"Received message 152/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.815932Z","level":"info","event":"Received message 153/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.816109Z","level":"info","event":"Received message 154/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.816286Z","level":"info","event":"Received message 155/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.816514Z","level":"info","event":"Received message 156/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.816706Z","level":"info","event":"Received message 157/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.816891Z","level":"info","event":"Received message 158/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.817086Z","level":"info","event":"Received message 159/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.817270Z","level":"info","event":"Received message 160/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.817550Z","level":"info","event":"Received message 161/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.817835Z","level":"info","event":"Received message 162/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.818061Z","level":"info","event":"Received message 163/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.818273Z","level":"info","event":"Received message 164/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.818531Z","level":"info","event":"Received message 165/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.818771Z","level":"info","event":"Received message 166/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.819002Z","level":"info","event":"Received message 167/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.819256Z","level":"info","event":"Received message 168/168","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.785071Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='air_quality_data', partition=0)} for group None on close","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":725}
+{"timestamp":"2026-09-29T15:19:27.785243Z","level":"info","event":"Updated partition assignment: []","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":270}
+{"timestamp":"2026-09-29T15:19:27.785777Z","level":"info","event":"<KafkaTCPTransport [172.19.0.4:29092<-58642]>: Closing transport","logger":"kafka.net.transport","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","filename":"transport.py","lineno":49}
+{"timestamp":"2026-09-29T15:19:27.786146Z","level":"info","event":"<KafkaConnection node_id=1 broker_version=(4, 0) (disconnected)>: Connection closed","logger":"kafka.net.connection","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","filename":"connection.py","lineno":242}
+{"timestamp":"2026-09-29T15:19:27.786469Z","level":"info","event":"Stopping metadata refresh loop","logger":"kafka.cluster","filename":"cluster.py","lineno":136}
+{"timestamp":"2026-09-29T15:19:27.786561Z","level":"info","event":"IO loop exited cleanly (client_id=kafka-python-3.0.11, stop=True)","logger":"kafka.net.selector","filename":"selector.py","lineno":247}
+{"timestamp":"2026-09-29T15:19:27.790241Z","level":"info","event":"Done. Returned value was: None","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-09-29T15:19:27.790386Z","level":"info","event":"::group::Post Execute","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"task","filename":"task_runner.py","lineno":1580}
+{"timestamp":"2026-09-29T15:19:27.822019Z","level":"info","event":"Successfully consumed 168 messages.","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.822294Z","level":"info","event":"Saved to data/raw/air_quality_from_kafka.csv","logger":"task.stdout"}
+{"timestamp":"2026-09-29T15:19:27.836931Z","level":"info","event":"::endgroup::","try_number":1,"dag_id":"climatepulse_pipeline","task_id":"air_quality_kafka_consumer","run_id":"manual__2026-09-29T15:19:17.622406+00:00","map_index":-1,"ti_id":"01a0edbf-afa5-7806-ac47-dfb3e0351e7d","logger":"task","filename":"task_runner.py","lineno":2379}

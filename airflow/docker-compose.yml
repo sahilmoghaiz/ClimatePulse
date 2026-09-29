@@ -1,0 +1,37 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: climatepulse-airflow-postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+
+  airflow:
+    build: .
+    container_name: climatepulse-airflow
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      KAFKA_BROKER: climatepulse-kafka:29092
+      PYTHONPATH: /opt/airflow
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ../ingestion:/opt/airflow/ingestion
+      - ../streaming:/opt/airflow/streaming
+      - ../processing:/opt/airflow/processing
+      - ../data:/opt/airflow/data
+      - ${USERPROFILE}/.aws:/home/airflow/.aws:ro
+    command: standalone
+
+volumes:
+  postgres-db-volume:
