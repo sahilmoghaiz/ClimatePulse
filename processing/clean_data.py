@@ -1,7 +1,7 @@
 import pandas as pd
 
-WEATHER_FILE = "data/raw/weather_data.csv"
-AIR_QUALITY_FILE = "data/raw/air_quality_data.csv"
+WEATHER_FILE = "data/raw/weather_from_kafka.csv"
+AIR_QUALITY_FILE = "data/raw/air_quality_from_kafka.csv"
 
 WEATHER_OUTPUT = "data/staging/weather_cleaned.csv"
 AIR_QUALITY_OUTPUT = "data/staging/air_quality_cleaned.csv"

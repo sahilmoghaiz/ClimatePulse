@@ -26,6 +26,8 @@ df.printSchema()
 
 # 3. Select important columns
 climate_df = df.select(
+    "state",
+    "city",
     "time",
     "temperature_2m",
     "relative_humidity_2m",
@@ -66,7 +68,7 @@ print("Transformed climate data:")
 transformed_df.show(5)
 
 # 6. Create daily climate summary
-daily_summary = transformed_df.groupBy("date").agg(
+daily_summary = transformed_df.groupBy("state", "city", "date").agg(
     round(avg("us_aqi"), 2).alias("average_aqi"),
     round(max("us_aqi"), 2).alias("maximum_aqi"),
     round(min("us_aqi"), 2).alias("minimum_aqi"),

@@ -18,7 +18,7 @@ def combine_data():
     combined_df = pd.merge(
         weather_df,
         air_quality_df,
-        on="time",
+        on=["state", "city", "time"],
         how="left"
     )
 
