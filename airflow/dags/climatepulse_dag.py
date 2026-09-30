@@ -35,7 +35,7 @@ def run_air_quality_kafka_consumer():
 
 
 def run_weather_s3_upload():
-    from processing.s3_upload import upload_to_s3
+    from processing.s3_upload_kafka_weather import upload_to_s3
     upload_to_s3()
 
 
