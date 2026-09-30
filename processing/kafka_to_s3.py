@@ -7,7 +7,7 @@ KAFKA_BROKER = os.getenv("KAFKA_BROKER", "localhost:9092")
 TOPIC_NAME = "weather_data"
 
 OUTPUT_FILE = "data/raw/weather_from_kafka.csv"
-EXPECTED_MESSAGES = 168
+EXPECTED_MESSAGES = 31 * 168
 
 
 def consume_weather_data():
