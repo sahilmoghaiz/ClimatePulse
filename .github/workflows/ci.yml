@@ -1,17 +1,23 @@
 name: ClimatePulse CI
 
 on:
-   push:
-   pull_request:
+  push:
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.14"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate Python Files
+        run: python -m compileall ingestion processing streaming spark config
