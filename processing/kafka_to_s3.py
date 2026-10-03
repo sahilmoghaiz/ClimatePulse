@@ -1,6 +1,7 @@
-import os
 import csv
 import json
+import os
+
 from kafka import KafkaConsumer
 
 KAFKA_BROKER = os.getenv("KAFKA_BROKER", "localhost:9092")

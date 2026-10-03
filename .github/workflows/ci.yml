@@ -24,3 +24,6 @@ jobs:
 
       - name: Validate Python Files
         run: python -m compileall ingestion processing streaming spark config
+
+      - name: Linting Code
+        run: ruff check ingestion processing streaming spark config tests

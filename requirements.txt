@@ -4,3 +4,4 @@ kafka-python
 boto3
 pyspark
 pytest
+ruff

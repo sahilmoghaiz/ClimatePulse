@@ -1,12 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import (
-    to_date,
-    avg,
-    max,
-    min,
-    round,
-    when
-)
+from pyspark.sql.functions import avg, max, min, round, to_date, when
 
 # 1. Create Spark session
 spark = SparkSession.builder \
