@@ -27,3 +27,6 @@ jobs:
 
       - name: Linting Code
         run: ruff check ingestion processing streaming spark config tests
+
+      - name: Build Airflow Docker Image
+        run: docker build -t climatepulse-airflow:ci ./airflow
