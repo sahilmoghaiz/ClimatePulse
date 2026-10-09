@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 airflow/logs/
 data/processed/
+# Generated Docker image files
+*.tar
+climatepulse-airflow

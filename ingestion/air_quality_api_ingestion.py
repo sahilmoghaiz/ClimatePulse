@@ -1,3 +1,5 @@
+
+import os
 from datetime import datetime, timezone
 
 import pandas as pd
@@ -23,14 +25,13 @@ def fetch_air_quality_data(location):
             "european_aqi"
         ),
         "timezone": "auto",
-        "forecast_days": 7
+        "forecast_days": 7,
     }
 
-    response = requests.get(url, params=params)
+    response = requests.get(url, params=params, timeout=60)
     response.raise_for_status()
 
-    data = response.json()
-    return data
+    return response.json()
 
 
 def main():
@@ -56,14 +57,13 @@ def main():
 
         all_air_quality_data.append(df)
 
-    final_df = pd.concat(
-        all_air_quality_data,
-        ignore_index=True
-    )
+    final_df = pd.concat(all_air_quality_data, ignore_index=True)
+
+    os.makedirs("data/raw", exist_ok=True)
 
     final_df.to_csv(
         "data/raw/air_quality_data.csv",
-        index=False
+        index=False,
     )
 
     print("\nAir quality data successfully saved.")
